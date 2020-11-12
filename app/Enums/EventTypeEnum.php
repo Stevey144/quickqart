@@ -1,0 +1,14 @@
+<?php
+
+
+namespace App\Enums;
+
+
+class EventTypeEnum
+{
+    const LOGGED_IN = 'LOGGED_IN',
+        FAILED_LOGIN = 'FAILED_LOGIN',
+        PASSWORD_RESET= 'PASSWORD_RESET',
+        PASSWORD_RESET_REQUEST = 'PASSWORD_RESET_REQUEST',
+        USER_ACCOUNT_CREATION = 'USER_ACCOUNT_CREATION';
+}

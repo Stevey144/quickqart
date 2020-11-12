@@ -1,0 +1,77 @@
+.input-group-text {
+    height: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .filter-header [type=date].form-control {
+        display: none;
+    }
+}
+
+.swal2-popup {
+    border: 2px solid #1e2628;
+}
+
+.swal2-content {
+    .swal-content-content {
+        display: block !important;
+        height: auto !important;
+        padding: 0 20px 20px!important;
+    }
+
+    .filter-input, .swal-content-content input.filter-input,
+    .swal-content-content select.filter-input,
+    .swal-content-content textarea.filter-input {
+        min-height: 45px !important;
+        height: 45px !important;
+        padding: 5px 15px !important;
+        margin-top: 20px !important;
+        width: 100%;
+        border: none;
+        background: #ddd !important;
+
+        position: relative;
+
+        &:focus {
+            border-color: #39393d!important;
+        }
+    }
+
+    .swal-content-content textarea.filter-input {
+        min-height: 150px !important;
+        font-size: 15px !important;
+        padding: 10px 15px !important;
+    }
+
+    .filter__item button {
+        min-height: 45px !important;
+        min-width: 150px !important;
+    }
+
+    .filter__item button.colored {
+        background: linear-gradient(90deg, $app-blue 0%, $app-blue-darken 100%);
+        min-height: 42px !important;
+    }
+
+
+    @media (max-width: 567px) {
+        .swal-content-content {
+            padding-left: 0!important;
+            padding-right: 0!important;
+        }
+    }
+
+}
+
+.custom-select {
+    border-width: 2px !important;
+    height: 40px;
+
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+.btn {
+    border-radius: 3px!important;
+}
