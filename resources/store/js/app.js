@@ -1,5 +1,6 @@
-import {canAccessCurrentRoute} from "./init-app";
+import { canAccessCurrentRoute } from "./init-app";
 import Vue from 'vue';
+import Advance from './views/Advance/Advance';
 import App from './views/App';
 import VueRouter from 'vue-router';
 import VueJWT from 'vuejs-jwt';
@@ -68,65 +69,70 @@ const router = new VueRouter({
         path: '/forgot-password',
         name: 'ForgotPassword',
         component: ForgotPassword,
-        meta: {layout: 'auth', protected: false}
+        meta: { layout: 'auth', protected: false }
     }, {
         path: '/reset-password/:token',
         name: 'ResetPassword',
         component: ResetPassword,
-        meta: {layout: 'auth', protected: false}
+        meta: { layout: 'auth', protected: false }
     }, {
         path: '/orders',
         name: 'Orders',
         component: Orders,
-        meta: {protected: true}
+        meta: { protected: true }
     }, {
         path: '/orders/:orderId',
         name: 'SingleOrder',
         component: SingleOrder,
-        meta: {protected: true}
+        meta: { protected: true }
     }, {
         path: '/products',
         name: 'Products',
         component: Products,
-        meta: {protected: true}
+        meta: { protected: true }
     }, {
         path: '/products/:slug',
         name: 'AddEditProduct',
         component: AddEditSingleProduct,
-        meta: {protected: true}
+        meta: { protected: true }
     }, {
         path: '/special-offers',
         name: 'SpecialOffers',
         component: SpecialOffers,
-        meta: {protected: true}
+        meta: { protected: true }
     }, {
         path: '/special-offers/:slug',
         name: 'AddEditSpecialOffer',
         component: AddEditSingleOffer,
-        meta: {protected: true}
+        meta: { protected: true }
     }, {
         path: '/products/:slug/view',
         name: 'ViewProduct',
         component: ViewProductDetail,
-        meta: {protected: true}
+        meta: { protected: true }
     }, {
         path: '/categories',
         name: 'Categories',
         component: Categories,
-        meta: {protected: true}
+        meta: { protected: true }
     }, {
         path: '/my-stores/:storeId',
         name: 'SingleStore',
         component: AddEditStore,
-        meta: {protected: true}
+        meta: { protected: true }
     }, {
         path: '/store-settings',
         redirect: '/my-stores/' + localStorage.getItem(appSetting.pref_store)
     }, {
+        path: '/edit-details',
+        name: 'edit details',
+        component: Advance,
+        meta: {protected: true}
+    }, {
         path: '/setting',
         name: 'Setting',
         component: Setting,
-        meta: {protected: true}
+        meta: { protected: true }
     }, {
         path: '*',
         name: 'not-found',
@@ -190,7 +196,7 @@ Vue.filter('file_size', function (value) {
 Vue.filter('currency', function (value, unit) {
     return bee.formatAsCurrency(value, unit)
 });
-Vue.filter('preview', function (value , length = 100) {
+Vue.filter('preview', function (value, length = 100) {
     if (!value) {
         return '';
     }
@@ -210,8 +216,8 @@ Vue.component('app-root', App);
 router.beforeEach((to, from, next) => {
     const resp = canAccessCurrentRoute(to);
     if (resp === 0) {
-        next({name: 'Login'});
-    } else if (resp === -1) next({name: 'AccessDenied'});
+        next({ name: 'Login' });
+    } else if (resp === -1) next({ name: 'AccessDenied' });
     else next();
 });
 
@@ -221,6 +227,6 @@ new Vue({
     el: '#app',
     router,
     template: '<app></app>',
-    components: {App},
+    components: { App },
 });
 

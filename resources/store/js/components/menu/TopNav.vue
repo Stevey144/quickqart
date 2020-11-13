@@ -52,6 +52,11 @@
                                 to="/store-settings">
                                 <span class="material-icons mr-2">settings</span> Edit Store
                             </router-link>
+                            <router-link
+                                class="dropdown-item d-flex align-items-center py-2"
+                                to="/edit-details">
+                                <span class="material-icons mr-2">settings</span> Advance
+                            </router-link>
                             <router-link class="dropdown-item d-flex align-items-center py-2" to="/setting">
                                 <span class="material-icons mr-2">account_circle</span> Edit Login Detail
                             </router-link>
