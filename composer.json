@@ -8,7 +8,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.2.5",
+        "php": "^7.2.4",
         "ext-json": "*",
         "asm89/stack-cors": "^1.3",
         "barryvdh/laravel-debugbar": "^3.5",
