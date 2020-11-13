@@ -4,7 +4,7 @@
         <div class="container page__heading-container">
             <div class="page__heading">
                 <div class="mt-3">
-                    <h4 class="header-heading font-weight-bold m-0 text-center">{{!isEdit ? 'Create new store' : 'Edit store'}}</h4>
+                    <h4 class="header-heading font-weight-bold m-0 text-center">{{!isEdit ? 'Create New Store' : 'Edit store'}}</h4>
                 </div>
             </div>
         </div>
