@@ -12,5 +12,16 @@ npm-debug.log
 yarn-error.log
 *.zip
 *.sql
+public/5-es5.d96dc11becdb54229b64.js
+public/5-es2015.d96dc11becdb54229b64.js
+public/6-es5.7127f104fbafbe55061d.js
+public/6-es2015.7127f104fbafbe55061d.js
+public/cp/all.css
+public/cp/app.css
+public/cp/all.css
+public/cp/app.js
+public/cp/all.js
+public/store/
+public/setup/
 storage/
 public/mix-manifest.json
