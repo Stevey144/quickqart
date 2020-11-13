@@ -143,7 +143,7 @@ class LoginController extends Controller
                 $subDomain = 'setup';
             }
 
-            $domain = env("APP_BASE_URL", 'localhost:8000');
+            $domain = 'localhost:8000'; //env("APP_BASE_URL", 'localhost:8000');
 
             return redirect("http://$subDomain.$domain/auth/$token");
         }
